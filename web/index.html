@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Biblioteca</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Biblioteca</h1>
+        <button onclick="carregar()">Carregar Documentos</button>
+        <ul id="lista"></ul>
+
+        <script>
+            function carregar() {
+                fetch("http://localhost:8080/documentos") // chama seu Java
+                    .then(res => res.json())
+                    .then(docs => {
+                        const ul = document.getElementById("lista");
+                        ul.innerHTML = "";
+                        docs.forEach(d => {
+                            const li = document.createElement("li");
+                            li.textContent = d.tipo + ": " + d.titulo + " - " + d.autor + " (" + d.ano + ")";
+                            ul.appendChild(li);
+                        });
+                    });
+            }
+        </script>
+    </body>
+</html>

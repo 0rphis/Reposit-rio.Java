@@ -1,3 +1,4 @@
+package main;
 public class Documento {
     private String titulo;
     private Autor autor;

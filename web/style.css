@@ -1,0 +1,13 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body { font-family: Arial, sans-serif; margin: 20px; }
+h1 { color: darkblue; }
+button { padding: 8px 12px; margin-bottom: 15px; }
+ul { list-style: none; padding: 0; }
+li { background: #f4f4f4; margin: 5px 0; padding: 8px; border-radius: 4px; }
+li:hover { background: #e2e2e2; cursor: pointer; }
+#item-details { margin-top: 20px; padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+#item-details h2 { margin-top: 0; }             

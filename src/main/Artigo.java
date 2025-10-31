@@ -1,3 +1,4 @@
+package main;
 
 public class Artigo  extends Documento{
     private String  revista;
